@@ -1,0 +1,49 @@
+/** Rishant Rokaha
+ * Professor Vohra
+ * Design and Analysis of Algorithms
+ * 31 January 2021
+ * Assignment 1
+ */
+
+package rrokaha;
+
+import java.util.Arrays;
+
+public class Driver {
+    public static void main(String[] args) {
+
+        System.out.println("Unsorted Array : ");
+        InsertionSortLinkedList<Name> list = new InsertionSortLinkedList<>();
+        list.add(new Name("Rokaha", "Rixant"));
+        list.add(new Name("Malakar", "Manish"));
+        list.add(new Name("KC", "Nirajan"));
+        list.add(new Name("Khatiwada", "Barsha"));
+        list.add(new Name("Khatiwada", "Nirajan"));
+        list.add(new Name("KC", "Manish"));
+        list.add(new Name("Malakar", "Barsha"));
+
+
+        System.out.println(Arrays.toString( list.toArray() ));
+        System.out.println();
+
+
+        System.out.println("Sorted Array : ");
+
+        list.sort();
+
+        System.out.println(Arrays.toString( list.toArray() ));
+
+
+
+        }
+
+
+
+
+
+
+    }
+
+
+
+
