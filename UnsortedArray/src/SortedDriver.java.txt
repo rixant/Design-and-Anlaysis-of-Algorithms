@@ -1,0 +1,27 @@
+/**
+ * Rishant Rokaha
+ * Professor Vohra
+ * Design and Analysis of Algorithms
+ * 7 March 2021
+ * Assignment 5
+ */
+
+public class SortedDriver {
+
+    public static void main(String[] args) {
+
+        //Instance of an Array
+        Double[] Players = {2.0, 9.0, 13.0, 22.0,37.0,45.0,54.0,68.0,73.0,89.0};
+
+        //Instance of SortedArraySearcher
+        SortedArraySearcher SAS= new SortedArraySearcher();
+
+        //Testing Methods
+        System.out.println("Recursive.........");
+        System.out.println("13.0 found? : "+SAS.inSortedRecursive(Players, 13.0));
+        System.out.println("47.0 found? : "+SAS.inSortedRecursive(Players, 47.0));
+
+    } //end main
+
+} //end SortedDriver
+

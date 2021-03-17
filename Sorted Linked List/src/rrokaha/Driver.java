@@ -61,13 +61,7 @@ public class Driver {
     }
     
 
-    public static <T extends Comparable<? super T>>  void displayList(LinkedSortedList<T> e){
-        T[] myList = e.toArray();
-        for(int i=0;i<myList.length;i++){
-            System.out.println(myList[i] + " ");
-        }
-        System.out.println();
-    }
+
 
 
 

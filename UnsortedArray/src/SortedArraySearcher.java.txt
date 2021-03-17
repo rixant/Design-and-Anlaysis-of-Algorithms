@@ -1,0 +1,38 @@
+/**
+ * Rishant Rokaha
+ * Professor Vohra
+ * Design and Analysis of Algorithms
+ * 7 March 2021
+ * Assignment 5
+ */
+
+public class SortedArraySearcher {
+
+    /** Searches a sorted array for anEntry by calling a recursive private method*/
+    public static <T extends Comparable<? super T>> boolean inSortedRecursive(T[] anArray, T anEntry){
+
+        return binarySearch(anArray, 0, anArray.length-1, anEntry);
+
+    }//end isSortedArrayRecursive
+
+    /** Searches anArray[first] through anArray[last] for desiredItem*/
+    private static <T extends Comparable<? super T>> boolean binarySearch(T[] anArray, int first, int last, T desiredItem){
+
+        boolean found;
+        int mid = first + (last-first)/2;
+
+        if(first > last)
+            found = false;
+        else if(desiredItem.equals(anArray[mid]))
+            found = true;
+        else if(desiredItem.compareTo(anArray[mid])<0)
+            found = binarySearch(anArray, first, mid-1, desiredItem);
+        else //desiredItem > anArray[mid]
+            found = binarySearch(anArray, mid+1, last, desiredItem);
+
+        return found;
+
+    } //end binarySearch
+
+
+} //end SortedArraySearcher

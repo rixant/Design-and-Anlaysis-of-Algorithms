@@ -1,0 +1,53 @@
+/**
+ * Rishant Rokaha
+ * Professor Vohra
+ * Design and Analysis of Algorithms
+ * 7 March 2021
+ * Assignment 5
+ */
+
+public class UnsortedArraySearcher {
+
+    /** Searches an unsorted array for anEntry iteratively*/
+    public static <T> boolean inUnsortedArrayIterative(T[] anArray, T anEntry){
+
+        boolean found=false;
+        int index=0;
+
+        while(!found && (index<anArray.length)){
+            if(anEntry.equals(anArray[index])){
+                found=true;
+            }
+            index++;
+        } //end while
+
+        return found;
+
+    } //end inUnsortedArrayIterative
+
+    /** Searches a unsorted array for anEntry by calling a recursive private method*/
+    public static <T> boolean inUnsortedArrayRecursive(T[] anArray, T anEntry){
+
+        return search(anArray, 0, anArray.length-1, anEntry);
+
+    }//end inUnsortedArrayRecursive
+
+
+
+    /** Recursively searches anArray[first] through anArray[last] for desiredItem */
+    private static <T> boolean search(T[] anArray, int first, int last, T desiredItem) {
+
+        boolean found = false;
+
+        if(first > last)
+            found = false; // No elements to search
+        else if(desiredItem.equals(anArray[first]))
+            found = true;
+        else
+            found = search(anArray, first+1, last, desiredItem);
+
+        return found;
+
+    } //end search
+
+} //end UnsortedArraySearcher
