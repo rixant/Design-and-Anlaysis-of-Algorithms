@@ -62,8 +62,10 @@ This repositiry consists of all the works that I did for CS302 course. It includ
 ◘ BinarySearchTree.java\
 ◘ Driver.java
 
-### 10. [Heap]()
-◘ AlgorithmComparision.java
+### 10. [Heap](https://github.com/Rixant/Design-and-Anlaysis-of-Algorithms/tree/main/Heap/src/rrokaha)
+◘ Driver.java
+◘ MaxHeap.java
+◘ MaxHeapInterface.java
 
 
 
